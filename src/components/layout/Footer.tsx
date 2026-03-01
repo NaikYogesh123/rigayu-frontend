@@ -29,20 +29,14 @@ export default function Footer() {
 
                         {/* Social Media Links */}
                         <div className="flex space-x-4 pt-4">
-                            <a href="https://wa.me/9118003095555" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-all group" title="WhatsApp">
+                            <a href="https://api.whatsapp.com/send/?phone=919480340163&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-all group" title="WhatsApp">
                                 <span className="text-xl group-hover:scale-110 transition-transform">💬</span>
                             </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 transition-all group" title="Instagram">
-                                <span className="text-xl group-hover:scale-110 transition-transform">📸</span>
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all group" title="LinkedIn">
-                                <span className="text-xl group-hover:scale-110 transition-transform">💼</span>
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-black transition-all group" title="Twitter / X">
-                                <span className="text-xl group-hover:scale-110 transition-transform">𝕏</span>
-                            </a>
-                            <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-800 transition-all group" title="Facebook">
+                            <a href="https://www.facebook.com/share/1GQFwYrNUr/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-800 transition-all group" title="Facebook">
                                 <span className="text-xl group-hover:scale-110 transition-transform">👤</span>
+                            </a>
+                            <a href="https://www.instagram.com/rigayu_innovations?igsh=MWY1dTBpamR5NHIwMg==" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 transition-all group" title="Instagram">
+                                <span className="text-xl group-hover:scale-110 transition-transform">📸</span>
                             </a>
                         </div>
                     </div>
@@ -64,7 +58,7 @@ export default function Footer() {
                         <div className="space-y-4 text-blue-100 text-sm">
                             <p className="flex items-start">
                                 <span className="mr-3 mt-1">📍</span>
-                                <span>Rigayu Innovations Pvt Ltd<br />#2nd floor, Manjunatha Complex<br />11th Cross, 'C'-Block <br />
+                                <span>Rigayu Innovations Pvt Ltd<br />#2nd floor, Manjunatha Complex<br />11th Cross, &apos;C&apos;-Block <br />
                                     Building No 36, MKK Main Road <br />Gayatri Nagar, Bangalore - 560021 <br />Karnataka, India</span>
                             </p>
                             <p className="flex items-center">

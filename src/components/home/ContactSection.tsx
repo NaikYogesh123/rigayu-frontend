@@ -6,7 +6,7 @@ export default function ContactSection() {
                     <div className="flex flex-col items-center justify-center p-12 lg:p-20 text-white space-y-12 text-center">
                         <div className="max-w-2xl">
                             <h2 className="text-apit-yellow font-bold tracking-widest uppercase text-sm mb-4">Get In Touch</h2>
-                            <h3 className="text-4xl font-extrabold mb-6">Let's Discuss Your Project</h3>
+                            <h3 className="text-4xl font-extrabold mb-6">Let&apos;s Discuss Your Project</h3>
                             <p className="text-blue-100 text-lg">
                                 Have questions about our solutions or need a custom consultation? Our team is ready to help you optimize your process.
                             </p>

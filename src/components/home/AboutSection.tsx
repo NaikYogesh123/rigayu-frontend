@@ -17,7 +17,7 @@ export default function AboutSection() {
                             <span className="text-3xl group-hover:scale-110 transition-transform">🎯</span>
                         </div>
                         <h4 className="text-xl font-bold text-gray-900 mb-4">Values & Vision</h4>
-                                     <ul className="text-gray-600 leading-relaxed list-disc list-inside space-y-2">
+                        <ul className="text-gray-600 leading-relaxed list-disc list-inside space-y-2">
                             <li>Commitment to healthy, natural, and chemical-free food processing</li>
                             <li>Vision: Making nutritious sprouted foods accessible to everyone</li>
                             <li>Sustainability: Zero waste processing and energy-efficient machines</li>
@@ -37,7 +37,7 @@ export default function AboutSection() {
                             <li>Prototype to production milestone</li>
                             <li>Patents filed or pending</li>
                             <li>Research or testing done (lab results, efficiency data)</li>
-                            <li>Founder's background and expertise in food tech or engineering</li>
+                            <li>Founder&apos;s background and expertise in food tech or engineering</li>
                         </ul>
                     </div>
 
@@ -51,8 +51,8 @@ export default function AboutSection() {
                             <li>Currently being tested by X businesses</li>
                             <li>Demo videos of the machine working</li>
                             <li>Founder interviews or local press coverage</li>
-                            <li>Any exhibition or trade fair you've participated in</li>
-                            <li>Founder's background and expertise in food tech or engineering</li>
+                            <li>Any exhibition or trade fair you&apos;ve participated in</li>
+                            <li>Founder&apos;s background and expertise in food tech or engineering</li>
                         </ul>
                     </div>
                 </div>
