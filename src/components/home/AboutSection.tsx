@@ -7,9 +7,9 @@ export default function AboutSection() {
                     <h3 className="text-4xl font-extrabold text-gray-900 mb-6">Food Process Innovation</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
                     Rigayu Innovations Pvt. Ltd. is a forward-thinking Indian company built on the foundation of innovation, responsibility, and long-term impact. We are driven by the belief that businesses today must go beyond profitability and contribute meaningfully to society.
-                    Founded with an entrepreneurial spirit and a deep understanding of evolving consumer lifestyles, Rigayu stands at the intersection of technology, sustainability, and modern convenience. Our approach is rooted in research, adaptability, and continuous improvement — ensuring that we stay aligned with the changing needs of the world.
-                    At Rigayu, innovation is not just a function — it is our mindset. We challenge conventional systems, rethink everyday experiences, and design solutions that reflect efficiency, accessibility, and conscious progress. Our team brings together diverse expertise and a shared commitment to building systems that are scalable, responsible, and future-ready.
-                    As we continue to grow, Rigayu Innovations Pvt. Ltd. remains committed to shaping a smarter, healthier, and more responsible future for the world.
+                    <br/>Founded with an entrepreneurial spirit and a deep understanding of evolving consumer lifestyles, Rigayu stands at the intersection of technology, sustainability, and modern convenience. Our approach is rooted in research, adaptability, and continuous improvement — ensuring that we stay aligned with the changing needs of the world.
+                    <br/>At Rigayu, innovation is not just a function — it is our mindset. We challenge conventional systems, rethink everyday experiences, and design solutions that reflect efficiency, accessibility, and conscious progress. Our team brings together diverse expertise and a shared commitment to building systems that are scalable, responsible, and future-ready.
+                    <br/>As we continue to grow, Rigayu Innovations Pvt. Ltd. remains committed to shaping a smarter, healthier, and more responsible future for the world.
                     </p>
                 </div>
 
