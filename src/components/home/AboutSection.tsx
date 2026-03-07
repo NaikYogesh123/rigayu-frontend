@@ -6,7 +6,7 @@ export default function AboutSection() {
                     <h2 className="text-apit-blue font-bold tracking-widest uppercase text-sm mb-4">Why Choose RIGAYU</h2>
                     <h3 className="text-4xl font-extrabold text-gray-900 mb-6">Food Process Innovation</h3>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                        RIGAYU Innovations Pvt Ltd is a leading provider of advanced food processing solutions, specializing in efficient and hygienic sprout production systems for commercial and industrial setups. With a focus on innovation, safety, and quality, we design machines that streamline processes from cleaning and soaking to germination and collection, ensuring fresh, high-quality sprouts every time.
+                       Rigayu Innovations Pvt. Ltd. is a forward-thinking Indian company built on the foundation of innovation, responsibility, and long-term impact. We are driven by the belief that businesses today must go beyond profitability and contribute meaningfully to society.
                     </p>
                 </div>
 
