@@ -62,11 +62,11 @@ export default function Footer() {
                             </p>
                             <p className="flex items-center">
                                 <span className="mr-3">📧</span>
-                                <a href="mailto:info@rigayu.co.in" className="hover:text-apit-yellow transition-colors">info@rigayu.co.in</a>
+                                <a href="mailto:info@rigayu.com" className="hover:text-apit-yellow transition-colors">info@rigayu.com</a>
                             </p>
                             <p className="flex items-center">
                                 <span className="mr-3">📞</span>
-                                <span>Toll Free: 1800 309 5555</span>
+                                <span>Toll Free: 9480340163</span>
                             </p>
                         </div>
                     </div>
