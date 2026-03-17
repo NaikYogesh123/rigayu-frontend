@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/rigayu-frontend',
+  // basePath: '/rigayu-frontend',
   turbopack: {
     root: '..'
   }
