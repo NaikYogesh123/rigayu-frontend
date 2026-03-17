@@ -1,22 +1,22 @@
-import Image from "next/image";
+
 
 const products = [
     {
         title: "Standard Sprout Bowl",
         description: "Elegant and reliable automated vending for fresh sprout bowls. Features a clean wood-panelled design that fits perfectly in office hubs and cafes.",
-        image: "/vending-sprout-1.jpg",
+        image: "./vending-sprout-1.jpg",
         tags: ["Fresh", "Elegant", "Automated"]
     },
     {
         title: "Premium Emerald Kiosk",
         description: "A high-end, luxury vending experience with a sleek deep green finish and premium UI. Optimized for high-traffic corporate environments.",
-        image: "/vending-sprout-2.jpg",
+        image: "./vending-sprout-2.jpg",
         tags: ["Gourmet", "Luxury", "Smart UI"]
     },
     {
         title: "Informative Sprout Station",
         description: "Our comprehensive station featuring educational graphics on the sprouting process and health benefits, perfect for wellness centers.",
-        image: "/vending-sprout-3.jpg",
+        image: "./vending-sprout-3.jpg",
         tags: ["Healthy", "Educational", "Wellness"]
     }
 ];
@@ -41,11 +41,11 @@ export default function ProductsSection() {
                             style={{ animationDelay: `${index * 200}ms` }}
                         >
                             <div className="relative aspect-[3/4] overflow-hidden">
-                                <Image
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
                                     src={product.image}
                                     alt={product.title}
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute top-6 left-6 flex flex-wrap gap-2">
                                     {product.tags.map((tag) => (

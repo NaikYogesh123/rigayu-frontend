@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -48,11 +48,10 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <Link href="/" className="flex-shrink-0 flex items-center group overflow-hidden rounded-lg">
                             <div className="relative animate-glint group-hover:scale-105 transition-transform duration-300 animate-in fade-in zoom-in duration-1000">
-                                <Image
-                                    src="/logo_transparent.png"
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src="./logo_transparent.png"
                                     alt="RIGAYU Logo"
-                                    width={150}
-                                    height={40}
                                     className="h-10 w-auto"
                                 />
                             </div>

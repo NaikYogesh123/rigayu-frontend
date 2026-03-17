@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 export default function Hero() {
     return (
@@ -47,11 +47,10 @@ export default function Hero() {
                     {/* Visual Content */}
                     <div className="mt-16 lg:mt-0 relative animate-in fade-in slide-in-from-right duration-1000 delay-300">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                            <Image
-                                src="/Model1.jpg"
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src="./Model1.jpg"
                                 alt="RIGAYU Innovations"
-                                width={800}
-                                height={800}
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

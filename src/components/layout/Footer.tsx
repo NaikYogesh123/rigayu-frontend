@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -12,11 +12,10 @@ export default function Footer() {
                     <div className="space-y-6">
                         <div className="flex items-center group">
                             <div className="relative animate-glint group-hover:scale-105 transition-transform duration-300">
-                                <Image
-                                    src="/logo_transparent.png"
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src="./logo_transparent.png"
                                     alt="RIGAYU Logo"
-                                    width={180}
-                                    height={50}
                                     className="h-12 w-auto brightness-0 invert"
                                 />
                             </div>
