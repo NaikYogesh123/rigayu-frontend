@@ -49,7 +49,7 @@ export default function Navbar() {
                         <Link href="/" className="flex-shrink-0 flex items-center group overflow-hidden rounded-lg">
                             <div className="relative animate-glint group-hover:scale-105 transition-transform duration-300 animate-in fade-in zoom-in duration-1000">
                                 <Image
-                                    src="/rigayu-frontend/logo_transparent.png"
+                                    src="/logo_transparent.png"
                                     alt="RIGAYU Logo"
                                     width={150}
                                     height={40}

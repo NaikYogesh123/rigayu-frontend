@@ -13,7 +13,7 @@ export default function Footer() {
                         <div className="flex items-center group">
                             <div className="relative animate-glint group-hover:scale-105 transition-transform duration-300">
                                 <Image
-                                    src="/rigayu-frontend/logo_transparent.png"
+                                    src="/logo_transparent.png"
                                     alt="RIGAYU Logo"
                                     width={180}
                                     height={50}

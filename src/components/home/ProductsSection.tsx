@@ -4,19 +4,19 @@ const products = [
     {
         title: "Standard Sprout Bowl",
         description: "Elegant and reliable automated vending for fresh sprout bowls. Features a clean wood-panelled design that fits perfectly in office hubs and cafes.",
-        image: "/rigayu-frontend/vending-sprout-1.jpg",
+        image: "/vending-sprout-1.jpg",
         tags: ["Fresh", "Elegant", "Automated"]
     },
     {
         title: "Premium Emerald Kiosk",
         description: "A high-end, luxury vending experience with a sleek deep green finish and premium UI. Optimized for high-traffic corporate environments.",
-        image: "/rigayu-frontend/vending-sprout-2.jpg",
+        image: "/vending-sprout-2.jpg",
         tags: ["Gourmet", "Luxury", "Smart UI"]
     },
     {
         title: "Informative Sprout Station",
         description: "Our comprehensive station featuring educational graphics on the sprouting process and health benefits, perfect for wellness centers.",
-        image: "/rigayu-frontend/vending-sprout-3.jpg",
+        image: "/vending-sprout-3.jpg",
         tags: ["Healthy", "Educational", "Wellness"]
     }
 ];

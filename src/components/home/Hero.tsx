@@ -48,7 +48,7 @@ export default function Hero() {
                     <div className="mt-16 lg:mt-0 relative animate-in fade-in slide-in-from-right duration-1000 delay-300">
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                             <Image
-                                src="/rigayu-frontend/Model1.jpg"
+                                src="/Model1.jpg"
                                 alt="RIGAYU Innovations"
                                 width={800}
                                 height={800}
