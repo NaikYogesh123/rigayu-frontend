@@ -26,7 +26,7 @@ export default function ContactSection() {
                                     <span className="text-3xl">📧</span>
                                 </div>
                                 <h4 className="font-bold text-xl mb-3">Email Us</h4>
-                                <p className="text-blue-100 text-lg">info@rigayu.co.in</p>
+                                <p className="text-blue-100 text-lg">info@rigayu.com</p>
                             </div>
 
                             <div className="flex flex-col items-center">
@@ -34,7 +34,7 @@ export default function ContactSection() {
                                     <span className="text-3xl">📞</span>
                                 </div>
                                 <h4 className="font-bold text-xl mb-3">Call Support</h4>
-                                <p className="text-blue-100 text-lg font-bold italic text-apit-yellow">Toll Free: 1800 309 5555</p>
+                                <p className="text-blue-100 text-lg font-bold italic text-apit-yellow">Toll Free: 9480340163</p>
                             </div>
                         </div>
                     </div>
