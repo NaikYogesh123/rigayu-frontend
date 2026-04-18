@@ -35,10 +35,10 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "Home", href: "#home", id: "home" },
+        { name: "Home", href: "/#home", id: "home" },
         { name: "About Us", href: "/about", id: "about" },
-        { name: "Our Products", href: "#products", id: "products" },
-        { name: "Contact Us", href: "#contact", id: "contact" }
+        { name: "Our Products", href: "/#products", id: "products" },
+        { name: "Contact Us", href: "/#contact", id: "contact" }
     ];
 
     return (
@@ -62,7 +62,7 @@ export default function Navbar() {
                         {navLinks.map((link) => (
                             <Link
                                 key={link.id}
-                                href={link.id === "home" ? "/" : link.href}
+                                href={link.href}
                                 className={`font-medium transition-all duration-300 relative py-2 ${activeSection === link.id
                                     ? "text-apit-blue"
                                     : "text-gray-700 hover:text-apit-blue"
@@ -103,7 +103,7 @@ export default function Navbar() {
                         {navLinks.map((link) => (
                             <Link
                                 key={link.id}
-                                href={link.id === "home" ? "/" : link.href}
+                                href={link.href}
                                 onClick={() => setIsOpen(false)}
                                 className={`block px-3 py-2 font-medium transition-colors ${activeSection === link.id
                                     ? "text-apit-blue bg-blue-50 rounded-lg"
