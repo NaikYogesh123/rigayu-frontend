@@ -1,80 +1,84 @@
-
+import Link from "next/link";
 
 const products = [
     {
-        title: "Standard Sprout Bowl",
-        description: "Elegant and reliable automated vending for fresh sprout bowls. Features a clean wood-panelled design that fits perfectly in office hubs and cafes.",
-        image: "./vending-sprout-1.jpg",
-        tags: ["Fresh", "Elegant", "Automated"]
+        slug: "corporate-campus-station",
+        title: "Corporate Campus Station",
+        description: "A Rigayu smart machine designed for corporate campus environments, providing fresh and healthy sprout salads to professionals. Built for high-footfall areas with seamless automated dispensing.",
+        tags: ["Corporate", "Smart Vending", "Automated"],
     },
     {
-        title: "Premium Emerald Kiosk",
-        description: "A high-end, luxury vending experience with a sleek deep green finish and premium UI. Optimized for high-traffic corporate environments.",
-        image: "./vending-sprout-2.jpg",
-        tags: ["Gourmet", "Luxury", "Smart UI"]
+        slug: "public-hub-kiosk",
+        title: "Public Hub Kiosk",
+        description: "Engineered for public gathering spots like shopping districts and transit stations. This kiosk brings nutritious sprout salads to busy urban environments with effortless convenience.",
+        tags: ["Public Spaces", "Urban", "High Traffic"],
     },
     {
-        title: "Informative Sprout Station",
-        description: "Our comprehensive station featuring educational graphics on the sprouting process and health benefits, perfect for wellness centers.",
-        image: "./vending-sprout-3.jpg",
-        tags: ["Healthy", "Educational", "Wellness"]
-    }
+        slug: "community-wellness-unit",
+        title: "Community Wellness Unit",
+        description: "Ideal for community halls, fitness centres, and wellness spaces. This compact unit delivers fresh sprout-based nutrition in enclosed, people-friendly environments.",
+        tags: ["Wellness", "Fitness", "Community"],
+    },
 ];
 
 export default function ProductsSection() {
     return (
         <section id="products" className="py-24 bg-background relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center max-w-3xl mx-auto mb-20 animate-in fade-in slide-in-from-bottom duration-1000">
+                <div className="text-center max-w-3xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom duration-1000">
                     <h2 className="text-apit-blue font-bold tracking-widest uppercase text-sm mb-4">Our Products</h2>
                     <h3 className="text-4xl font-extrabold text-white mb-6">Smart Sprout Solutions</h3>
                     <p className="text-lg text-gray-400 leading-relaxed">
-                        Discover our range of automated vending machines designed to deliver fresh, nutritious sprout bowls with a seamless, premium experience.
+                        Discover our range of automated machines designed to deliver fresh, nutritious sprout salads with a seamless, premium experience.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {products.map((product, index) => (
-                        <div
-                            key={index}
-                            className="group bg-surface rounded-[2.5rem] overflow-hidden border border-border-color hover:border-apit-blue/30 transition-all duration-500 hover:shadow-2xl hover:shadow-apit-blue/10 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-1000"
+                        <Link
+                            key={product.slug}
+                            href={`/products/${product.slug}`}
+                            className="group bg-surface rounded-3xl p-8 border border-border-color hover:border-apit-blue/30 transition-all duration-500 hover:shadow-2xl hover:shadow-apit-blue/10 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-1000"
                             style={{ animationDelay: `${index * 200}ms` }}
                         >
-                            <div className="relative aspect-[3/4] overflow-hidden">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src={product.image}
-                                    alt={product.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                <div className="absolute top-6 left-6 flex flex-wrap gap-2">
-                                    {product.tags.map((tag) => (
-                                        <span key={tag} className="bg-black/60 backdrop-blur-md text-apit-blue text-xs font-bold px-3 py-1.5 rounded-full border border-apit-blue/20">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
+                            {/* Icon */}
+                            <div className="w-14 h-14 bg-apit-blue/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-apit-blue transition-colors">
+                                <span className="text-2xl group-hover:scale-110 transition-transform">
+                                    {index === 0 ? "🏢" : index === 1 ? "🏙️" : "🏋️"}
+                                </span>
                             </div>
 
-                            <div className="p-8">
-                                <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-apit-blue transition-colors">
-                                    {product.title}
-                                </h4>
-                                <p className="text-gray-400 leading-relaxed mb-6 line-clamp-3">
-                                    {product.description}
-                                </p>
-                                <button className="flex items-center text-apit-blue font-bold hover:gap-3 transition-all">
-                                    Learn More
-                                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
-                                </button>
+                            {/* Tags */}
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {product.tags.map((tag) => (
+                                    <span key={tag} className="text-apit-blue text-xs font-bold px-3 py-1 rounded-full border border-apit-blue/20 bg-apit-blue/5">
+                                        {tag}
+                                    </span>
+                                ))}
                             </div>
-                        </div>
+
+                            {/* Title */}
+                            <h4 className="text-xl font-bold text-white mb-3 group-hover:text-apit-blue transition-colors">
+                                {product.title}
+                            </h4>
+
+                            {/* Description */}
+                            <p className="text-gray-400 leading-relaxed mb-6 line-clamp-3">
+                                {product.description}
+                            </p>
+
+                            {/* CTA */}
+                            <span className="flex items-center text-apit-blue font-bold group-hover:gap-3 transition-all">
+                                View Product
+                                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </span>
+                        </Link>
                     ))}
                 </div>
 
-                {/* Visual Background Elements */}
+                {/* Background elements */}
                 <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-apit-blue/5 rounded-full blur-3xl -z-10"></div>
                 <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-apit-yellow/5 rounded-full blur-3xl -z-10"></div>
             </div>
