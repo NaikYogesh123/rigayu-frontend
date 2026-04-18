@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/utils/assetPath";
 import Link from "next/link";
 
 
@@ -14,7 +15,7 @@ export default function Footer() {
                             <div className="relative animate-glint group-hover:scale-105 transition-transform duration-300">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src="./logo_transparent.png"
+                                    src={getAssetPath("/logo_transparent.png")}
                                     alt="RIGAYU Logo"
                                     className="h-12 w-auto brightness-0 invert"
                                 />

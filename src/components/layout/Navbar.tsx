@@ -1,5 +1,6 @@
 "use client";
 
+import { getAssetPath } from "@/utils/assetPath";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -53,7 +54,7 @@ export default function Navbar() {
         } else {
             // On another page — use window.location for a full navigation
             e.preventDefault();
-            window.location.href = "/" + hash;
+            window.location.href = getAssetPath("/") + hash;
         }
     };
 
@@ -78,7 +79,7 @@ export default function Navbar() {
                             <div className="relative animate-glint group-hover:scale-105 transition-transform duration-300 animate-in fade-in zoom-in duration-1000">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
-                                    src="/logo_transparent.png"
+                                    src={getAssetPath("/logo_transparent.png")}
                                     alt="RIGAYU Logo"
                                     className="h-10 w-auto brightness-0 invert"
                                 />

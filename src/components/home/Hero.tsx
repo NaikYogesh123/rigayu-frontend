@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function Hero() {
     return (
@@ -6,7 +7,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="/hero-bg.png"
+                    src={getAssetPath("/hero-bg.png")}
                     alt=""
                     className="w-full h-full object-cover opacity-30"
                 />
@@ -53,7 +54,7 @@ export default function Hero() {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-apit-blue/10 border-2 border-border-color">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/hero-plant.png"
+                                src={getAssetPath("/hero-plant.png")}
                                 alt="Rigayu Food Processing Plant"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />

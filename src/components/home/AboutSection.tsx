@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/utils/assetPath";
 import Link from "next/link";
 
 export default function AboutSection() {
@@ -29,7 +30,7 @@ export default function AboutSection() {
             <div className="absolute inset-0 z-0 pointer-events-none">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="/hero-bg.png"
+                    src={getAssetPath("/hero-bg.png")}
                     alt=""
                     className="w-full h-full object-cover opacity-5"
                 />
@@ -65,7 +66,7 @@ export default function AboutSection() {
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40 border-2 border-border-color">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/hero-bg.png"
+                                src={getAssetPath("/hero-bg.png")}
                                 alt="Futuristic Innovation"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />

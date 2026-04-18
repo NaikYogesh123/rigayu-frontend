@@ -1,3 +1,4 @@
+import { getAssetPath } from "@/utils/assetPath";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -44,7 +45,7 @@ export default function CommunityWellnessUnit() {
                         <div className="rounded-3xl overflow-hidden border-2 border-border-color shadow-2xl shadow-black/30">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/products/product-3.png"
+                                src={getAssetPath("/products/product-3.png")}
                                 alt="Community Wellness Unit"
                                 className="w-full h-auto object-cover"
                             />

@@ -1,3 +1,5 @@
+import { getAssetPath } from "@/utils/assetPath";
+
 export default function ContactSection() {
     return (
         <section id="contact" className="py-24 bg-background relative overflow-hidden">
@@ -5,7 +7,7 @@ export default function ContactSection() {
             <div className="absolute inset-0 z-0 pointer-events-none">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="/hero-bg.png"
+                    src={getAssetPath("/hero-bg.png")}
                     alt=""
                     className="w-full h-full object-cover opacity-5"
                 />
