@@ -23,12 +23,12 @@ const products = [
 
 export default function ProductsSection() {
     return (
-        <section id="products" className="py-24 bg-white relative overflow-hidden">
+        <section id="products" className="py-24 bg-background relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-20 animate-in fade-in slide-in-from-bottom duration-1000">
                     <h2 className="text-apit-blue font-bold tracking-widest uppercase text-sm mb-4">Our Products</h2>
-                    <h3 className="text-4xl font-extrabold text-gray-900 mb-6">Smart Sprout Solutions</h3>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <h3 className="text-4xl font-extrabold text-white mb-6">Smart Sprout Solutions</h3>
+                    <p className="text-lg text-gray-400 leading-relaxed">
                         Discover our range of automated vending machines designed to deliver fresh, nutritious sprout bowls with a seamless, premium experience.
                     </p>
                 </div>
@@ -37,7 +37,7 @@ export default function ProductsSection() {
                     {products.map((product, index) => (
                         <div
                             key={index}
-                            className="group bg-gray-50 rounded-[2.5rem] overflow-hidden border border-gray-100 hover:border-apit-blue/20 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-1000"
+                            className="group bg-surface rounded-[2.5rem] overflow-hidden border border-border-color hover:border-apit-blue/30 transition-all duration-500 hover:shadow-2xl hover:shadow-apit-blue/10 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-1000"
                             style={{ animationDelay: `${index * 200}ms` }}
                         >
                             <div className="relative aspect-[3/4] overflow-hidden">
@@ -49,7 +49,7 @@ export default function ProductsSection() {
                                 />
                                 <div className="absolute top-6 left-6 flex flex-wrap gap-2">
                                     {product.tags.map((tag) => (
-                                        <span key={tag} className="bg-white/90 backdrop-blur-md text-apit-blue text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                                        <span key={tag} className="bg-black/60 backdrop-blur-md text-apit-blue text-xs font-bold px-3 py-1.5 rounded-full border border-apit-blue/20">
                                             {tag}
                                         </span>
                                     ))}
@@ -57,10 +57,10 @@ export default function ProductsSection() {
                             </div>
 
                             <div className="p-8">
-                                <h4 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-apit-blue transition-colors">
+                                <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-apit-blue transition-colors">
                                     {product.title}
                                 </h4>
-                                <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
+                                <p className="text-gray-400 leading-relaxed mb-6 line-clamp-3">
                                     {product.description}
                                 </p>
                                 <button className="flex items-center text-apit-blue font-bold hover:gap-3 transition-all">

@@ -5,7 +5,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-apit-blue text-white pt-16 pb-8">
+        <footer className="bg-surface border-t border-border-color text-white pt-16 pb-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {/* Brand and Description */}
@@ -20,7 +20,7 @@ export default function Footer() {
                                 />
                             </div>
                         </div>
-                        <p className="text-blue-100 text-sm leading-relaxed">
+                        <p className="text-gray-400 text-sm leading-relaxed">
                             RIGAYU Innovations Pvt Ltd – Efficient, hygienic, and automated sprout processing.
                             High-quality sprouts for commercial setups, processed safely and reliably.
                             Innovating food solutions with precision, safety, and industrial-grade performance.
@@ -44,17 +44,17 @@ export default function Footer() {
                     <div className="md:ml-auto">
                         <h3 className="text-lg font-bold mb-6 text-apit-yellow uppercase tracking-wider">Quick Links</h3>
                         <ul className="space-y-4">
-                            <li><Link href="/" className="hover:text-apit-yellow transition-colors">Home</Link></li>
-                            <li><Link href="#about" className="hover:text-apit-yellow transition-colors">About Us</Link></li>
-                            <li><Link href="#contact" className="hover:text-apit-yellow transition-colors">Contact Us</Link></li>
-                            <li><Link href="#solutions" className="hover:text-apit-yellow transition-colors">Solutions</Link></li>
+                            <li><Link href="/" className="text-gray-400 hover:text-apit-yellow transition-colors">Home</Link></li>
+                            <li><Link href="/about" className="text-gray-400 hover:text-apit-yellow transition-colors">About Us</Link></li>
+                            <li><Link href="/#contact" className="text-gray-400 hover:text-apit-yellow transition-colors">Contact Us</Link></li>
+                            <li><Link href="/#products" className="text-gray-400 hover:text-apit-yellow transition-colors">Solutions</Link></li>
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div className="md:ml-auto">
                         <h3 className="text-lg font-bold mb-6 text-apit-yellow uppercase tracking-wider">Contact Us</h3>
-                        <div className="space-y-4 text-blue-100 text-sm">
+                        <div className="space-y-4 text-gray-400 text-sm">
                             <p className="flex items-start">
                                 <span className="mr-3 mt-1">📍</span>
                                 <span>Rigayu Innovations Pvt Ltd<br />#2nd floor, Manjunatha Complex<br />11th Cross, &apos;C&apos;-Block <br />
@@ -72,7 +72,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-blue-200">
+                <div className="border-t border-border-color mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
                     <p>© {currentYear} RIGAYU INNOVATIONS</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
