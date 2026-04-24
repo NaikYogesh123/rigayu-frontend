@@ -26,52 +26,28 @@ export default function AboutSection() {
 
     return (
         <section id="about" className="py-24 bg-surface relative overflow-hidden text-white">
-            {/* Background image overlay */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                    src={getAssetPath("/hero-bg.png")}
-                    alt=""
-                    className="w-full h-full object-cover opacity-5"
-                />
-            </div>
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="lg:grid lg:grid-cols-2 lg:gap-20 items-center mb-20">
-                    <div className="animate-in fade-in slide-in-from-left duration-1000">
-                        <h2 className="text-apit-blue font-bold tracking-widest uppercase text-sm mb-4">About Us</h2>
-                        <h3 className="text-4xl lg:text-5xl font-extrabold mb-8">Rigayu Innovations Pvt. Ltd.</h3>
-                        <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
-                            <p>
-                                Rigayu Innovations Pvt. Ltd. is a forward-thinking Indian company built on the foundation of innovation, responsibility, and long-term impact. We are driven by the belief that businesses today must go beyond profitability and contribute meaningfully to society.
-                            </p>
-                            <p>
-                                Founded with an entrepreneurial spirit and a deep understanding of evolving consumer lifestyles, Rigayu stands at the intersection of technology, sustainability, and modern convenience.
-                            </p>
-                        </div>
-                        <div className="mt-10">
-                            <Link
-                                href="/about"
-                                className="inline-flex items-center gap-2 bg-apit-blue text-white font-semibold px-8 py-3.5 rounded-full hover:bg-apit-dark-blue transition-all duration-300 shadow-lg shadow-apit-blue/25 hover:shadow-xl hover:shadow-apit-blue/30 hover:scale-105 group"
-                            >
-                                Know More
-                                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </Link>
-                        </div>
+                <div className="max-w-4xl mx-auto text-center mb-20 animate-in fade-in slide-in-from-bottom duration-1000">
+                    <h2 className="text-apit-blue font-bold tracking-widest uppercase text-sm mb-4">About Us</h2>
+                    <h3 className="text-4xl lg:text-5xl font-extrabold mb-8">Rigayu Innovations Pvt. Ltd.</h3>
+                    <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+                        <p>
+                            Rigayu Innovations Pvt. Ltd. is a forward-thinking Indian company built on the foundation of innovation, responsibility, and long-term impact. We are driven by the belief that businesses today must go beyond profitability and contribute meaningfully to society.
+                        </p>
+                        <p>
+                            Founded with an entrepreneurial spirit and a deep understanding of evolving consumer lifestyles, Rigayu stands at the intersection of technology, sustainability, and modern convenience.
+                        </p>
                     </div>
-
-                    <div className="mt-16 lg:mt-0 relative animate-in fade-in slide-in-from-right duration-1000">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-black/40 border-2 border-border-color">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                                src={getAssetPath("/hero-bg.png")}
-                                alt="Futuristic Innovation"
-                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                        </div>
+                    <div className="mt-10">
+                        <Link
+                            href="/about"
+                            className="inline-flex items-center gap-2 bg-apit-blue text-white font-semibold px-8 py-3.5 rounded-full hover:bg-apit-dark-blue transition-all duration-300 shadow-lg shadow-apit-blue/25 hover:shadow-xl hover:shadow-apit-blue/30 hover:scale-105 group"
+                        >
+                            Know More
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
                     </div>
                 </div>
 
@@ -90,7 +66,7 @@ export default function AboutSection() {
             </div>
 
             {/* Background Decor */}
-            <div className="absolute top-1/2 left-0 -translate-x-1/2 w-96 h-96 bg-apit-blue/5 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute top-1/2 left-0 -translate-x-1/2 w-96 h-96 bg-apit-blue/10 rounded-full blur-3xl -z-10"></div>
         </section>
     );
 }

@@ -26,7 +26,7 @@ export default function Navbar() {
         };
 
         const observer = new IntersectionObserver(handleIntersect, observerOptions);
-        const sections = ["home", "about", "products", "interest", "contact"];
+        const sections = ["home", "about", "products", "contact"];
 
         sections.forEach(id => {
             const element = document.getElementById(id);
@@ -105,27 +105,6 @@ export default function Navbar() {
                             </Link>
                         ))}
 
-                        <div className="flex items-center space-x-4 pl-4 border-l border-white/10 ml-2">
-                            {/* E-Brochure Icon */}
-                            <button
-                                title="Download E-Brochure"
-                                className="p-2 text-gray-400 hover:text-apit-yellow transition-colors relative group"
-                                onClick={() => { /* Placeholder for download logic */ }}
-                            >
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                                <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-surface border border-border-color text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">E-Brochure</span>
-                            </button>
-
-                            {/* Language Selector */}
-                            <div className="flex items-center text-xs font-bold text-gray-500 uppercase tracking-widest border border-white/10 rounded-lg px-2 py-1.5 hover:border-apit-blue transition-colors cursor-pointer group">
-                                <span className="text-apit-blue mr-1">EN</span>
-                                <svg className="w-3 h-3 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                </svg>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="md:hidden flex items-center">
@@ -165,16 +144,8 @@ export default function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Link href="/#interest" onClick={(e) => { handleNavClick(e, "/#interest"); setIsOpen(false); }} className="block px-3 py-2 text-apit-blue font-bold">Express Interest</Link>
+                        <Link href="/express-interest" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-apit-blue font-bold">Express Interest</Link>
 
-                        <div className="flex items-center justify-between px-3 py-4 border-t border-white/10 mt-2">
-                            <span className="text-gray-400 text-sm">Download Brochure</span>
-                            <button className="text-apit-yellow">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                </svg>
-                            </button>
-                        </div>
                     </div>
                 </div>
             )}

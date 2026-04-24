@@ -9,7 +9,7 @@ export default function ContactSection() {
                 <img
                     src={getAssetPath("/hero-bg.png")}
                     alt=""
-                    className="w-full h-full object-cover opacity-5"
+                    className="w-full h-full object-cover opacity-15"
                 />
             </div>
 

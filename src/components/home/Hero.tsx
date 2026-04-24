@@ -1,17 +1,18 @@
 import { getAssetPath } from "@/utils/assetPath";
+import Link from "next/link";
 
 export default function Hero() {
     return (
-        <section id="home" className="relative bg-background overflow-hidden py-10 lg:py-16">
-            {/* Background image overlay */}
+        <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+            {/* Background image & gradient overlay */}
             <div className="absolute inset-0 z-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src={getAssetPath("/hero-bg.png")}
                     alt=""
-                    className="w-full h-full object-cover opacity-30"
+                    className="w-full h-full object-cover opacity-60 blur-[2px]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -40,12 +41,12 @@ export default function Hero() {
                         </div>
 
                         <div className="flex flex-wrap gap-4 pt-4">
-                            <a href="#about" className="bg-apit-blue text-white font-bold px-8 py-4 rounded-full hover:bg-apit-dark-blue transition-all shadow-lg shadow-apit-blue/20 hover:scale-105 active:scale-95">
+                            <Link href="/about" className="bg-apit-blue text-white font-bold px-8 py-4 rounded-full hover:bg-apit-dark-blue transition-all shadow-lg shadow-apit-blue/20 hover:scale-105 active:scale-95">
                                 Know More
-                            </a>
-                            <a href="#interest" className="bg-white/5 backdrop-blur-sm text-white border border-white/10 font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-all hover:scale-105 active:scale-95">
+                            </Link>
+                            <Link href="/express-interest" className="bg-white/5 backdrop-blur-sm text-white border border-white/10 font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-all hover:scale-105 active:scale-95">
                                 Express Interest
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
