@@ -11,66 +11,67 @@ export default function CorporateCampusStation() {
     return (
         <div className="min-h-screen bg-background">
             {/* Hero */}
-            <section className="relative bg-[#FFF8EE] py-20 overflow-hidden border-b border-black/5">
+            <section className="relative bg-surface py-14 overflow-hidden border-b border-border-color">
                 <div className="absolute inset-0">
-                    <div className="absolute top-0 left-1/4 w-72 h-72 bg-apit-blue/10 rounded-full blur-3xl"></div>
+                    <div className="absolute top-0 left-1/4 w-72 h-72 bg-apit-blue/5 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-apit-blue/5 rounded-full blur-3xl"></div>
                 </div>
-                <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-                    <Link href="/#products" className="inline-flex items-center text-apit-blue font-bold text-sm mb-8 group">
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <Link href="/#products" className="inline-flex items-center text-gray-400 hover:text-apit-blue transition-colors mb-6 group">
                         <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
                         </svg>
                         Back to Products
                     </Link>
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-4">
                         {["Corporate", "Smart Vending", "Automated"].map(tag => (
-                            <span key={tag} className="text-[0.65rem] font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-apit-blue/20 bg-apit-blue/5 text-apit-blue">{tag}</span>
+                            <span key={tag} className="text-apit-blue text-sm font-bold px-3 py-1 rounded-full border border-apit-blue/20 bg-apit-blue/5">{tag}</span>
                         ))}
                     </div>
-                    <h1 className="font-syne text-4xl md:text-6xl font-extrabold text-foreground leading-[1.1] tracking-tight mb-4">
-                        Corporate Campus<br />Station
+                    <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-3">
+                        Corporate Campus Station
                     </h1>
-                    <p className="text-lg text-[#5a6e5c] max-w-2xl leading-relaxed font-medium">
-                        Smart nutrition for the modern workplace. Delivering fresh, hygienic sprout salads effortlessly.
+                    <p className="text-xl text-gray-400 max-w-3xl leading-relaxed">
+                        Smart nutrition for the modern workplace
                     </p>
                 </div>
             </section>
 
             {/* Content */}
-            <section className="py-24 bg-white">
-                <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <section className="py-20">
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         {/* Image */}
-                        <div className="rounded-[2.5rem] overflow-hidden border border-black/5 shadow-2xl shadow-black/5">
+                        <div className="rounded-3xl overflow-hidden border-2 border-border-color shadow-2xl shadow-black/30">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src={getAssetPath("/products/product-1.png")}
                                 alt="Corporate Campus Station"
-                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                                className="w-full h-auto object-cover"
                             />
                         </div>
 
                         {/* Details */}
-                        <div className="space-y-10">
+                        <div className="space-y-8">
                             <div>
-                                <span className="font-syne text-[0.7rem] font-bold tracking-[0.15em] uppercase text-apit-blue mb-4 block">Product Overview</span>
-                                <p className="text-[#5a6e5c] text-lg leading-relaxed font-medium">
-                                    A smart machine designed for corporate campus environments, providing fresh and healthy sprout salads to professionals. Built for high-footfall areas with seamless automated dispensing.
+                                <h2 className="text-apit-blue font-bold tracking-widest uppercase text-xl lg:text-3xl mb-6">Product Overview</h2>
+                                <p className="text-gray-400 text-2xl lg:text-3xl leading-relaxed font-medium">
+                                    A Rigayu smart machine designed for corporate campus environments, providing fresh and healthy sprout salads to professionals. Built for high-footfall areas with seamless automated dispensing.
                                 </p>
                             </div>
 
-                            <div className="bg-apit-yellow/10 rounded-[2rem] p-8 border border-apit-yellow/20">
-                                <h3 className="font-syne text-xl font-bold text-foreground mb-6">Key Features</h3>
-                                <ul className="grid grid-cols-1 gap-4">
+                            <div>
+                                <h3 className="text-3xl lg:text-5xl font-bold text-white mb-8">Key Features</h3>
+                                <ul className="space-y-6">
                                     {[
-                                        "Designed for cafeterias and co-working spaces",
-                                        "Automated dispensing of fresh sprout salads",
-                                        "Sleek design that complements modern offices",
-                                        "Built for high-traffic, low-maintenance use",
-                                        "Promotes employee wellness and productivity",
+                                        "Designed for corporate office lobbies, cafeterias, and co-working spaces",
+                                        "Automated dispensing of fresh, hygienically prepared sprout salads",
+                                        "Sleek, modern design that complements professional environments",
+                                        "Built for high-traffic areas with reliable, low-maintenance operation",
+                                        "Promotes employee wellness with convenient access to nutritious meals",
                                     ].map((feature, i) => (
-                                        <li key={i} className="flex items-start text-[#3a5a3c] text-[0.95rem] font-medium">
-                                            <span className="text-apit-blue mr-3 mt-1">✦</span>
+                                        <li key={i} className="flex items-start text-xl lg:text-2xl text-gray-400 font-medium">
+                                            <span className="text-apit-blue mr-3 mt-0.5">✦</span>
                                             {feature}
                                         </li>
                                     ))}
@@ -78,7 +79,7 @@ export default function CorporateCampusStation() {
                             </div>
 
                             <div className="pt-4">
-                                <Link href="/#contact" className="inline-flex items-center gap-3 bg-foreground text-apit-yellow font-syne font-bold px-10 py-5 rounded-full hover:bg-apit-blue hover:text-white transition-all duration-300 shadow-xl shadow-black/5 hover:translate-y-[-2px]">
+                                <Link href="/#contact" className="inline-flex items-center gap-2 bg-apit-blue text-white font-semibold px-8 py-3.5 rounded-full hover:bg-apit-dark-blue transition-all duration-300 shadow-lg shadow-apit-blue/25 hover:shadow-xl hover:scale-105 group">
                                     Get a Quote
                                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />

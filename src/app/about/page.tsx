@@ -1,110 +1,158 @@
-"use client";
+import type { Metadata } from "next";
 
-import { useEffect } from "react";
+export const metadata: Metadata = {
+    title: "About Us - RIGAYU Innovations",
+    description:
+        "Learn about Rigayu Innovations Pvt. Ltd. — a forward-thinking Indian company built on innovation, responsibility, and long-term impact.",
+};
 
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-background">
-            {/* Minimal Header Spacer */}
-            <div className="h-[80px]"></div>
-
-            {/* Hero Section - Compact & High-Impact */}
-            <section id="about" className="relative overflow-hidden py-24 px-[5vw] reveal">
-                <div className="max-w-7xl mx-auto text-center relative z-10">
-                    <div className="inline-flex items-center gap-2 bg-lime text-dark font-syne text-[0.75rem] font-bold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-6">
-                        Rigayu Innovations
-                    </div>
-                    <h1 className="font-syne text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-[1.1] tracking-tight text-dark mb-4">
-                        Shaping a <span className="text-green">Smarter</span>,<br />Healthier Future.
+            {/* Hero Banner - compact */}
+            <section className="relative bg-surface py-14 overflow-hidden border-b border-border-color">
+                <div className="absolute inset-0">
+                    <div className="absolute top-0 left-1/4 w-72 h-72 bg-apit-blue/5 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-apit-blue/5 rounded-full blur-3xl"></div>
+                </div>
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                    <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-4 animate-in fade-in slide-in-from-bottom duration-700">
+                        About Us
                     </h1>
-                    <p className="text-lg text-[#5a6e5c] max-w-2xl mx-auto leading-relaxed font-medium">
-                        A forward-thinking Indian deep-tech startup built on innovation, responsibility, and long-term impact.
+                    <p className="text-2xl lg:text-3xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium animate-in fade-in slide-in-from-bottom duration-1000 delay-200">
+                        Shaping a smarter, healthier, and more responsible future
                     </p>
                 </div>
             </section>
 
-            {/* Our Story / Who We Are - Layout aligned with homepage */}
-            <section className="bg-dark text-white rounded-[3rem] mx-[2vw] my-12 reveal overflow-hidden">
-                <div className="max-w-7xl mx-auto px-[5vw] py-[7rem] grid grid-cols-1 lg:grid-cols-2 gap-[5rem] items-start">
-                    <div className="space-y-6">
-                        <div className="section-tag font-syne text-[0.7rem] font-bold tracking-[0.15em] uppercase text-lime mb-4 block">Who We Are</div>
-                        <h2 className="font-syne text-[clamp(2rem,3.5vw,2.8rem)] font-extrabold leading-[1.1] tracking-tight">
-                            Driven by Innovation,<br />Guided by Impact.
+            {/* About Us Content */}
+            <section className="py-20">
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="animate-in fade-in slide-in-from-bottom duration-1000 text-center">
+                        <h2 className="text-apit-blue font-bold tracking-widest uppercase text-2xl lg:text-3xl mb-6">
+                            Who We Are
                         </h2>
-                        <div className="space-y-4 text-white/60 leading-relaxed font-medium text-[1.05rem]">
+                        <h3 className="text-5xl lg:text-7xl font-extrabold text-white mb-8">
+                            Rigayu Innovations Pvt. Ltd.
+                        </h3>
+                        <div className="space-y-8 text-2xl lg:text-3xl text-gray-400 leading-relaxed font-medium">
                             <p>
-                                Founded with an entrepreneurial spirit and a deep understanding of evolving consumer lifestyles, Rigayu stands at the intersection of technology, sustainability, and modern convenience.
+                                Rigayu Innovations Pvt. Ltd. is a forward-thinking Indian company built on the foundation of innovation, responsibility, and long-term impact. We are driven by the belief that businesses today must go beyond profitability and contribute meaningfully to society.
                             </p>
                             <p>
-                                At Rigayu, innovation is not just a function — it is our mindset. We challenge conventional systems, rethink everyday experiences, and design solutions that reflect efficiency, accessibility, and conscious progress.
+                                Founded with an entrepreneurial spirit and a deep understanding of evolving consumer lifestyles, Rigayu stands at the intersection of technology, sustainability, and modern convenience. Our approach is rooted in research, adaptability, and continuous improvement — ensuring that we stay aligned with the changing needs of the world.
+                            </p>
+                            <p>
+                                At Rigayu, innovation is not just a function — it is our mindset. We challenge conventional systems, rethink everyday experiences, and design solutions that reflect efficiency, accessibility, and conscious progress. Our team brings together diverse expertise and a shared commitment to building systems that are scalable, responsible, and future-ready.
+                            </p>
+                            <p>
+                                As we continue to grow, Rigayu Innovations Pvt. Ltd. remains committed to shaping a smarter, healthier, and more responsible future for the world.
                             </p>
                         </div>
                     </div>
-                    <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8 lg:p-12 h-full">
-                        <div className="space-y-6 text-white/75 leading-relaxed font-medium">
-                            <p>
-                                Our team brings together diverse expertise and a shared commitment to building systems that are scalable, responsible, and future-ready.
-                            </p>
-                            <p>
-                                As we continue to grow, Rigayu Innovations Pvt. Ltd. remains committed to bridging the gap between ancient health wisdom and modern lifestyle needs through intelligent machinery.
-                            </p>
-                            <div className="pt-6">
-                                <div className="text-lime font-syne text-sm font-bold tracking-widest uppercase mb-4">Born in India 🇮🇳</div>
-                                <div className="h-[2px] w-12 bg-green"></div>
+                </div>
+            </section>
+
+            {/* Vision & Mission */}
+            <section className="py-20 bg-surface">
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        {/* Vision */}
+                        <div className="bg-surface-light p-10 rounded-3xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-apit-blue/10 transition-all duration-300 border border-border-color group">
+                            <div className="w-16 h-16 bg-apit-blue/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-apit-blue transition-colors">
+                                <span className="text-4xl group-hover:scale-110 transition-transform">🔭</span>
+                            </div>
+                            <h4 className="text-3xl lg:text-5xl font-bold text-white mb-8">Our Vision</h4>
+                            <div className="space-y-6 text-xl lg:text-2xl text-gray-400 leading-relaxed font-medium">
+                                <p>
+                                    At Rigayu Innovations Pvt. Ltd., our vision is to become a transformative force in the world&apos;s evolving innovation ecosystem. We aspire to build a future where technology, sustainability, and accessibility work together seamlessly to enhance everyday living.
+                                </p>
+                                <p>
+                                    We envision a world where progressive thinking drives responsible growth, where businesses create measurable social impact, and where innovation is used as a tool to improve quality of life across communities. Our long-term goal is to shape systems that are not only efficient and scalable but also ethical and future-ready.
+                                </p>
                             </div>
                         </div>
+
+                        {/* Mission */}
+                        <div className="bg-surface-light p-10 rounded-3xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-apit-blue/10 transition-all duration-300 border border-border-color group">
+                            <div className="w-16 h-16 bg-apit-blue/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-apit-blue transition-colors">
+                                <span className="text-4xl group-hover:scale-110 transition-transform">🚀</span>
+                            </div>
+                            <h4 className="text-3xl lg:text-5xl font-bold text-white mb-8">Our Mission</h4>
+                            <p className="text-xl lg:text-2xl text-gray-400 leading-relaxed font-medium mb-6">
+                                Our mission is to design and implement forward-looking solutions that address modern lifestyle challenges with intelligence and responsibility. We are committed to:
+                            </p>
+                            <ul className="text-xl lg:text-2xl text-gray-400 leading-relaxed font-medium list-disc list-inside space-y-4 mb-6">
+                                <li>Fostering a culture of innovation, research, and continuous improvement</li>
+                                <li>Upholding transparency, integrity, and ethical business practices</li>
+                                <li>Building scalable and sustainable models that adapt to changing societal needs</li>
+                                <li>Creating long-term value for stakeholders, partners, and communities</li>
+                            </ul>
+                            <p className="text-xl lg:text-2xl text-gray-400 leading-relaxed font-medium">
+                                Through strategic thinking, collaborative partnerships, and a relentless focus on impact, we aim to contribute meaningfully to India&apos;s growth story while maintaining global standards of excellence.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Vision & Mission - Color Block Style */}
-            <section className="py-24 px-[5vw] reveal">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Vision */}
-                    <div className="group bg-white border border-black/5 rounded-[2.5rem] p-10 transition-all duration-300 hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] hover:translate-y-[-5px]">
-                        <div className="w-16 h-16 bg-cream rounded-2xl flex items-center justify-center mb-8">
-                            <span className="text-3xl">🔭</span>
-                        </div>
-                        <h3 className="font-syne text-2xl font-extrabold text-dark mb-6">Our Vision</h3>
-                        <p className="text-[#5a6e5c] leading-relaxed font-medium">
-                            To become a transformative force in the world&apos;s evolving innovation ecosystem. We aspire to build a future where technology, sustainability, and accessibility work together seamlessly to enhance everyday living.
+            {/* Core Values */}
+            <section className="py-20">
+                <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-apit-blue font-bold tracking-widest uppercase text-2xl lg:text-3xl mb-6">
+                            What We Stand For
+                        </h2>
+                        <h3 className="text-5xl lg:text-7xl font-extrabold text-white mb-8">Core Values</h3>
+                        <p className="text-2xl lg:text-3xl text-gray-400 leading-relaxed font-medium">
+                            At Rigayu Innovations Pvt. Ltd., our values define who we are, how we operate, and what we stand for. They guide our decisions, shape our culture, and drive our long-term vision.
                         </p>
                     </div>
 
-                    {/* Mission */}
-                    <div className="group bg-dark border border-white/5 shadow-2xl rounded-[2.5rem] p-10 transition-all duration-300 hover:translate-y-[-5px] text-white">
-                        <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-8">
-                            <span className="text-3xl">🚀</span>
-                        </div>
-                        <h3 className="font-syne text-2xl font-extrabold mb-6">Our Mission</h3>
-                        <p className="text-white/60 leading-relaxed font-medium">
-                            To design and implement forward-looking solutions that address modern lifestyle challenges with intelligence and responsibility. We uphold transparency, integrity, and ethical business practices in every model we build.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Core Values - Bento Grid Style */}
-            <section className="bg-cream py-24 px-[5vw] reveal">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-16">
-                        <div className="section-tag font-syne text-[0.7rem] font-bold tracking-[0.15em] uppercase text-green mb-4 block">Core Principles</div>
-                        <h2 className="font-syne text-[clamp(2rem,3.5vw,3rem)] font-extrabold text-dark mb-6">What We Stand For</h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { icon: "💡", title: "Innovation with Purpose", desc: "We believe innovation must solve real-world challenges with relevance and practicality." },
-                            { icon: "🤝", title: "Integrity & Transparency", desc: "Trust is our foundation. We uphold the highest ethical standards in every partnership." },
-                            { icon: "🌱", title: "Sustainability", desc: "Our approach emphasizes long-term value creation and mindful social impact." },
-                            { icon: "⭐", title: "Excellence", desc: "We strive for precision and quality in everything we do. Excellence is our standard." },
-                            { icon: "❤️", title: "User-Centric", desc: "Understanding evolving needs allows us to remain relevant and impactful." },
-                            { icon: "🤲", title: "Collaboration", desc: "Mutual respect and teamwork are central to our innovative culture." }
-                        ].map((v, i) => (
-                            <div key={i} className="bg-white border border-black/5 rounded-[2rem] p-8 transition-all duration-300 hover:shadow-xl hover:border-green/10 group">
-                                <div className="text-3xl mb-6">{v.icon}</div>
-                                <h4 className="font-syne text-lg font-bold text-dark mb-3 group-hover:text-green transition-colors">{v.title}</h4>
-                                <p className="text-sm text-[#5a6e5c] leading-relaxed font-medium">{v.desc}</p>
+                            {
+                                icon: "💡",
+                                title: "Innovation with Purpose",
+                                desc: "We believe innovation must solve real-world challenges. Every idea we pursue is rooted in relevance, practicality, and meaningful impact.",
+                            },
+                            {
+                                icon: "🤝",
+                                title: "Integrity & Transparency",
+                                desc: "We uphold the highest standards of honesty, ethics, and accountability. Trust is the foundation of our relationships—with partners, stakeholders, and the communities we serve.",
+                            },
+                            {
+                                icon: "🌱",
+                                title: "Sustainability & Responsibility",
+                                desc: "We are committed to responsible growth. Our approach emphasizes long-term value creation while being mindful of environmental and social impact.",
+                            },
+                            {
+                                icon: "⭐",
+                                title: "Excellence in Execution",
+                                desc: "We strive for precision, quality, and continuous improvement in everything we do. Excellence is not a goal—it is our standard.",
+                            },
+                            {
+                                icon: "❤️",
+                                title: "Customer-Centric Thinking",
+                                desc: "We place people at the centre of our decision-making. Understanding evolving needs allows us to remain relevant, adaptive, and impactful.",
+                            },
+                            {
+                                icon: "🤲",
+                                title: "Collaboration & Respect",
+                                desc: "We value diverse perspectives and believe collective intelligence drives stronger outcomes. Mutual respect and teamwork are central to our culture.",
+                            },
+                        ].map((value, index) => (
+                            <div
+                                key={index}
+                                className="bg-surface p-8 rounded-3xl shadow-lg shadow-black/20 hover:shadow-xl hover:shadow-apit-blue/10 transition-all duration-300 border border-border-color group"
+                            >
+                                <div className="w-14 h-14 bg-apit-blue/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-apit-blue transition-colors">
+                                    <span className="text-3xl group-hover:scale-110 transition-transform">
+                                        {value.icon}
+                                    </span>
+                                </div>
+                                <h4 className="text-2xl lg:text-3xl font-bold text-white mb-4">{value.title}</h4>
+                                <p className="text-xl text-gray-400 leading-relaxed">{value.desc}</p>
                             </div>
                         ))}
                     </div>

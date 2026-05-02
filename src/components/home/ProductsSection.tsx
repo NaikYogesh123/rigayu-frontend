@@ -4,69 +4,83 @@ const products = [
     {
         slug: "corporate-campus-station",
         title: "Corporate Campus Station",
-        description: "A smart machine designed for corporate campus environments, providing fresh and healthy sprout salads to professionals in high-footfall areas.",
+        description: "A Rigayu smart machine designed for corporate campus environments, providing fresh and healthy sprout salads to professionals. Built for high-footfall areas with seamless automated dispensing.",
         tags: ["Corporate", "Smart Vending", "Automated"],
-        icon: "🏢",
-        gradient: "from-[#0D1A0F] to-[#1a3a1f]"
     },
     {
         slug: "public-hub-kiosk",
         title: "Public Hub Kiosk",
-        description: "Engineered for shopping districts and transit stations. This kiosk brings nutritious sprout salads to busy urban environments effortlessly.",
+        description: "Engineered for public gathering spots like shopping districts and transit stations. This kiosk brings nutritious sprout salads to busy urban environments with effortless convenience.",
         tags: ["Public Spaces", "Urban", "High Traffic"],
-        icon: "🏙️",
-        gradient: "from-[#FF6B2B] to-[#ff8c55]"
     },
     {
         slug: "community-wellness-unit",
         title: "Community Wellness Unit",
-        description: "Ideal for community halls, fitness centres, and wellness spaces. A compact unit delivering fresh sprout-based nutrition in friendly environments.",
+        description: "Ideal for community halls, fitness centres, and wellness spaces. This compact unit delivers fresh sprout-based nutrition in enclosed, people-friendly environments.",
         tags: ["Wellness", "Fitness", "Community"],
-        icon: "🏋️",
-        gradient: "from-[#1DB954] to-[#47d47a]"
     },
 ];
 
 export default function ProductsSection() {
     return (
-        <section id="products" className="bg-cream py-[7rem] reveal">
-            <div className="max-w-7xl mx-auto px-[5vw]">
-                <div className="products-header flex flex-col md:flex-row items-end justify-between mb-[3.5rem] flex-wrap gap-[1rem]">
-                    <div className="space-y-4">
-                        <div className="section-tag font-syne text-[0.7rem] font-[700] tracking-[0.15em] uppercase text-green mb-[1rem] block">Our Solutions</div>
-                        <h2 className="font-syne text-[clamp(2rem, 3.5vw, 3.5rem)] font-[800] leading-[1.1] tracking-[-0.03em] text-dark">
-                            Engineered for<br />Every Environment.
-                        </h2>
-                    </div>
+        <section id="products" className="py-24 relative overflow-hidden">
+            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center max-w-3xl mx-auto mb-16 animate-in fade-in slide-in-from-bottom duration-1000">
+                    <h2 className="text-apit-blue font-bold tracking-widest uppercase text-2xl lg:text-3xl mb-4">Our Products</h2>
+                    <h3 className="text-5xl lg:text-7xl font-extrabold text-white mb-8">Smart Sprout Solutions</h3>
+                    <p className="text-2xl lg:text-3xl text-gray-400 leading-relaxed font-medium">
+                        Discover our range of automated machines designed to deliver fresh, nutritious sprout salads with a seamless, premium experience.
+                    </p>
                 </div>
 
-                <div className="products-grid grid grid-cols-1 md:grid-cols-3 gap-[1.5rem]">
-                    {products.map((product, i) => (
-                        <div key={i} className="product-card rounded-[2rem] overflow-hidden bg-white border border-[rgba(0,0,0,0.07)] transition-all duration-300 hover:translate-y-[-8px] hover:shadow-[0_30px_60px_rgba(13,26,15,0.12)] cursor-pointer group">
-                            <div className={`pc-top h-[200px] p-[2rem] flex flex-col justify-between relative overflow-hidden bg-gradient-to-br ${product.gradient}`}>
-                                <div className="absolute bottom-[-40px] right-[-40px] w-[130px] h-[130px] rounded-full bg-white/10"></div>
-                                <div className="pc-emoji text-[3rem] drop-shadow-md">{product.icon}</div>
-                                <div className="pc-badges flex gap-[0.4rem] flex-wrap relative z-10">
-                                    {product.tags.map((tag, j) => (
-                                        <div key={j} className="pc-badge text-[0.65rem] font-[700] tracking-[0.05em] px-[0.75rem] py-[0.35rem] rounded-[100px] bg-white/20 text-white backdrop-blur-sm uppercase">
-                                            {tag}
-                                        </div>
-                                    ))}
-                                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {products.map((product, index) => (
+                        <Link
+                            key={product.slug}
+                            href={`/products/${product.slug}`}
+                            className="group bg-surface rounded-3xl p-8 border border-border-color hover:border-apit-blue/30 transition-all duration-500 hover:shadow-2xl hover:shadow-apit-blue/10 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-1000"
+                            style={{ animationDelay: `${index * 200}ms` }}
+                        >
+                            {/* Icon */}
+                            <div className="w-14 h-14 bg-apit-blue/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-apit-blue transition-colors">
+                                <span className="text-3xl group-hover:scale-110 transition-transform">
+                                    {index === 0 ? "🏢" : index === 1 ? "🏙️" : "🏋️"}
+                                </span>
                             </div>
-                            <div className="pc-body p-[1.8rem]">
-                                <h3 className="font-syne text-[1.25rem] font-[700] mb-[0.6rem] text-dark group-hover:text-green transition-colors">{product.title}</h3>
-                                <p className="text-[0.9rem] text-[#5a6e5c] leading-[1.6] mb-[1.5rem] font-medium">{product.description}</p>
-                                <Link
-                                    href={`/products/${product.slug}`}
-                                    className="pc-link inline-flex items-center gap-[0.4rem] font-syne text-[0.85rem] font-[700] text-green no-underline border-b-2 border-lime pb-[2px] transition-all hover:gap-[0.8rem]"
-                                >
-                                    View Product
-                                </Link>
+
+                            {/* Tags */}
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {product.tags.map((tag) => (
+                                    <span key={tag} className="text-apit-blue text-sm font-bold px-3 py-1 rounded-full border border-apit-blue/20 bg-apit-blue/5">
+                                        {tag}
+                                    </span>
+                                ))}
                             </div>
-                        </div>
+
+                            {/* Title */}
+                            <h4 className="text-3xl font-bold text-white mb-4 group-hover:text-apit-blue transition-colors">
+                                {product.title}
+                            </h4>
+
+                            {/* Description */}
+                            <p className="text-xl text-gray-400 leading-relaxed mb-6 line-clamp-3">
+                                {product.description}
+                            </p>
+
+                            {/* CTA */}
+                            <span className="flex items-center text-apit-blue font-bold group-hover:gap-3 transition-all">
+                                View Product
+                                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </span>
+                        </Link>
                     ))}
                 </div>
+
+                {/* Background elements */}
+                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-apit-blue/5 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-apit-yellow/5 rounded-full blur-3xl -z-10"></div>
             </div>
         </section>
     );
